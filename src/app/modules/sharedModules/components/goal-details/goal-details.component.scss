@@ -1,0 +1,82 @@
+// h5
+// {
+//     //text-align: center;
+//     color: #26a69a;
+//     padding: 10px;
+// }
+.btn-floating
+{
+    opacity: 0;
+}
+.page-header .btn-floating.halfway-fab.add
+{
+     top: 0;
+     right: 0;
+     opacity: 1;
+}
+
+.Done
+{
+    border-left: 5px solid green;
+}
+.InProgress
+{
+    border-left: 5px solid orange;
+}
+.new
+{
+    border-left: 5px solid red;
+}
+
+.actions
+{
+    float:right;
+}
+
+.divider
+{
+    margin-bottom: 30px;
+}
+.card
+{
+    margin: 0 0 2rem 0;
+    margin-right: 10px;
+    margin-top: 1.5rem;
+}
+.card .card-content
+{
+    padding:15px 10px;
+}
+.card .card-content .card-title
+{
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.card .card-content .btn-floating.halfway-fab.edit
+{
+     right: 45px;  
+     top: -20px;
+}
+.card .card-content .btn-floating.halfway-fab.delete
+{
+    right: 0;
+    top: -20px;
+}
+.card:hover .btn-floating
+{
+    opacity: 1;
+    -webkit-transition: all 1ms linear ease-in;
+    -moz-transition: all 1ms linear ease-in;
+    transition: all 1ms linear ease-in;
+}
+
+.page-header
+{
+    position: relative;
+}
+/*Modal  */
+.modal-content
+{
+    padding-top:0;
+}

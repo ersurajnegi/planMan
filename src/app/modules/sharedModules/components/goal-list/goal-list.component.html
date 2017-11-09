@@ -1,0 +1,25 @@
+<div class="col m6 list-wrapper">
+        <div class="row quarter-container">
+                <div class="container-header">
+                        <h4 class="quarter-number">Quarter 1</h4>
+                </div>
+                <cockpit-quick-add></cockpit-quick-add>
+                <div class="col s12 goal-list-container" *ngIf="goals?.length > 0" malihuCustomScroller [scrollOptions]=" {theme: 'dark-thick',axis: 'y'}">
+                        <cockpit-goal-details *ngFor="let goal of goals" [goal]="goal"></cockpit-goal-details>
+                </div>
+                <div class="col s12 goal-list-container" *ngIf="goals?.length == 0">
+                        <div class="preloader-wrapper small active">
+                                <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                                <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
