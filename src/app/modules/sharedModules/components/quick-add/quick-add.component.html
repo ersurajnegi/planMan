@@ -1,8 +1,8 @@
-<form class="col s12">
+<div class="col s12">
         <div class="row">
                 <div class="input-field col s12">
-                        <input id="title" type="text" class="validate">
+                        <input id="title" type="text" [(ngModel)]="title" (keyup.enter) = "addGoal($event.target.value)" class="validate">
                         <label for="title">Goal Title</label>
                 </div>
         </div>
-</form>
+</div>

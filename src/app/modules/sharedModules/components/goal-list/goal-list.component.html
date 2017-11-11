@@ -1,25 +1,16 @@
-<div class="col m6 list-wrapper">
+<div class="col m12 l6 list-wrapper">
         <div class="row quarter-container">
                 <div class="container-header">
-                        <h4 class="quarter-number">Quarter 1</h4>
+                        <h4 class="quarter-number">Quarter {{quarterNumber}}</h4>
                 </div>
-                <cockpit-quick-add></cockpit-quick-add>
-                <div class="col s12 goal-list-container" *ngIf="goals?.length > 0" malihuCustomScroller [scrollOptions]=" {theme: 'dark-thick',axis: 'y'}">
-                        <cockpit-goal-details *ngFor="let goal of goals" [goal]="goal"></cockpit-goal-details>
+                <cockpit-quick-add (quickAdd)="goalAdded($event)"></cockpit-quick-add>
+                <div class="col s12 m12 goal-list-container" *ngIf="goals?.length > 0" malihuCustomScroller [scrollOptions]=" {theme: 'dark-thick',axis: 'y'}">
+                        <cockpit-goal-details *ngFor="let goal of goals;trackBy: goal?.id" (goalDelete)="deleteGoal($event)" [goal]="goal"></cockpit-goal-details>
                 </div>
-                <div class="col s12 goal-list-container" *ngIf="goals?.length == 0">
-                        <div class="preloader-wrapper small active">
-                                <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                                <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                                <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                                <div class="circle"></div>
-                                        </div>
-                                </div>
-                        </div>
+                <div class="col s12 m12 goal-list-container" *ngIf="isLoading">
+                        <cockpit-loader></cockpit-loader>
+                </div>
+                <div class="col s12 m12 goal-list-container" *ngIf="goals?.length == 0 && !isLoading">
+                        <label class="no-goals">You haven't added any Goal yet. Please add Goal</label>
                 </div>
         </div>

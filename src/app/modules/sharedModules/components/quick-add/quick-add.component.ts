@@ -1,16 +1,26 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'cockpit-quick-add',
-  templateUrl: './quick-add.component.html',
-  styleUrls: ['./quick-add.component.scss'],
-  encapsulation: ViewEncapsulation.None
+        selector: 'cockpit-quick-add',
+        templateUrl: './quick-add.component.html',
+        styleUrls: ['./quick-add.component.scss'],
+        encapsulation: ViewEncapsulation.Emulated
 })
 export class QuickAddComponent implements OnInit {
 
-  constructor() { }
+        title: string;
 
-  ngOnInit() {
-  }
+        @Output()
+        quickAdd: EventEmitter<any> = new EventEmitter<any>();
+
+        constructor() {
+                this.title = '';
+        }
+
+        ngOnInit() {
+        }
+        addGoal(title: string) {
+                this.quickAdd.emit(title);
+        }
 
 }

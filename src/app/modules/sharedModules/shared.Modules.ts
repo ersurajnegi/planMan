@@ -6,12 +6,19 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MalihuCustomScrollerModule } from 'ngx-malihu-scroller';
 import { HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from './components/loader/loader.component';
+import { MaterializeModule } from 'ng2-materialize';
+import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
         imports: [
                 CommonModule,
+                MaterializeModule.forRoot(),
                 MalihuCustomScrollerModule,
-                HttpClientModule
+                HttpClientModule,
+                FormsModule
         ],
         exports: [
                 QuickAddComponent,
@@ -19,12 +26,18 @@ import { HttpClientModule } from '@angular/common/http';
                 GoalDetailsComponent,
                 CommonModule,
                 MalihuCustomScrollerModule,
-                HttpClientModule
+                HttpClientModule,
+                LoaderComponent,
+                DeleteConfirmationComponent,
+                FormsModule
         ],
         declarations: [
                 QuickAddComponent,
                 GoalListComponent,
-                GoalDetailsComponent
+                GoalDetailsComponent,
+                LoaderComponent,
+                DeleteConfirmationComponent
+
         ],
 })
 export class SharedModule {

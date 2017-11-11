@@ -1,0 +1,70 @@
+{
+  "personalGoals1": [
+    {
+      "id": 34326,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 90764,
+      "title": "fdgfdgfd",
+      "status": "InProgress"
+    },
+    {
+      "id": 84217,
+      "title": "dfdfdfdf",
+      "status": "InProgress"
+    },
+    {
+      "id": 44182,
+      "title": "vvbcvbc",
+      "status": "InProgress"
+    }
+  ],
+  "personalGoals2": [
+    {
+      "id": 2000,
+      "title": "Quarter 2 : Want to Go to Ladakh",
+      "status": "Done"
+    },
+    {
+      "id": 2001,
+      "title": "Quarter 2 : Go for World Tour",
+      "status": "InProgress"
+    },
+    {
+      "id": 2002,
+      "title": "Quarter 2 : Want to Go to Ladakh",
+      "status": "Done"
+    }
+  ],
+  "personalGoals3": [
+    {
+      "id": 3001,
+      "title": "Quarter 3 : Go for World Tour",
+      "status": "InProgress"
+    },
+    {
+      "id": 3002,
+      "title": "Quarter 3 : Want to Go to Ladakh",
+      "status": "Done"
+    }
+  ],
+  "personalGoals4": [
+    {
+      "id": 4000,
+      "title": "Quarter 4 : Want to Go to Ladakh",
+      "status": "Done"
+    },
+    {
+      "id": 4001,
+      "title": "Quarter 4 : Go for World Tour",
+      "status": "InProgress"
+    },
+    {
+      "id": 4002,
+      "title": "Quarter 4 : Want to Go to Ladakh",
+      "status": "Done"
+    }
+  ]
+}

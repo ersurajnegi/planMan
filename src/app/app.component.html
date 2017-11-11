@@ -1,10 +1,10 @@
- <cockpit-profile></cockpit-profile> 
+<cockpit-profile></cockpit-profile>
 <div class="goal-list-container-wrapper" malihuCustomScroller [scrollOptions]=" {
     theme: 'dark-thick',
     axis: 'yx'
   }">
         <div class="row">
-                <cockpit-goal-list *ngFor="let i of [1,2,3,4]">
+                <cockpit-goal-list *ngFor="let i of [1,2,3,4]" [quarterNumber]="i">
 
                 </cockpit-goal-list>
         </div>

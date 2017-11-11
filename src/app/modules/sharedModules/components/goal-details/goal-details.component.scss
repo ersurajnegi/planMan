@@ -42,41 +42,35 @@
     margin: 0 0 2rem 0;
     margin-right: 10px;
     margin-top: 1.5rem;
-}
-.card .card-content
-{
-    padding:15px 10px;
-}
-.card .card-content .card-title
-{
-    line-height: 1.5;
-    font-size: 1rem;
-    margin-bottom: 0;
-}
-.card .card-content .btn-floating.halfway-fab.edit
-{
-     right: 45px;  
-     top: -20px;
-}
-.card .card-content .btn-floating.halfway-fab.delete
-{
-    right: 0;
-    top: -20px;
-}
-.card:hover .btn-floating
-{
-    opacity: 1;
-    -webkit-transition: all 1ms linear ease-in;
-    -moz-transition: all 1ms linear ease-in;
-    transition: all 1ms linear ease-in;
-}
-
-.page-header
-{
     position: relative;
-}
-/*Modal  */
-.modal-content
-{
-    padding-top:0;
+    .card-content
+    {
+        padding:15px 10px;
+        .card-title
+        {
+            line-height: 1.5;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        .btn-floating.halfway-fab.edit
+        {
+             right: 45px;  
+             top: -20px;
+        }
+        .btn-floating.halfway-fab.delete
+        {
+            right: 0;
+            top: -20px;
+        }
+    }
+    &:hover
+    {
+        .btn-floating
+        {
+            opacity: 1;
+            -webkit-transition: all 1ms linear ease-in;
+            -moz-transition: all 1ms linear ease-in;
+            transition: all 1ms linear ease-in;
+        }
+    }
 }
