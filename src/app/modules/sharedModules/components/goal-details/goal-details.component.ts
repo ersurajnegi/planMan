@@ -1,4 +1,8 @@
+import { EditGoalComponent } from './../edit-goal/edit-goal.component';
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+import { MzModalService } from 'ng2-materialize';
+
+
 
 @Component({
         selector: 'cockpit-goal-details',
@@ -13,12 +17,16 @@ export class GoalDetailsComponent implements OnInit {
         @Output()
         goalDelete: EventEmitter<any> = new EventEmitter<any>();
 
+        modalComponentRef: any;
         showConfirmationDrawer: boolean;
-        constructor() {
+        constructor(
+                private _modalService: MzModalService
+        ) {
                 this.showConfirmationDrawer = false;
         }
 
         ngOnInit() {
+                console.log('init');
         }
 
         deleteGoalConfirmed(event: any) {
@@ -34,4 +42,8 @@ export class GoalDetailsComponent implements OnInit {
                 this.showConfirmationDrawer = !this.showConfirmationDrawer;
         }
 
+        editGoal() {
+                const goal = Object.assign({}, this.goal);
+                this.modalComponentRef = this._modalService.open(EditGoalComponent, { goal });
+        }
 }

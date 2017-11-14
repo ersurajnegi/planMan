@@ -4,7 +4,7 @@
                         {{goal?.title}}
                 </span>
                 <a class="btn-floating halfway-fab waves-effect waves-light teal edit" *ngIf="!showConfirmationDrawer">
-                        <i class="material-icons">edit</i>
+                        <i class="material-icons" (click)="editGoal();">edit</i>
                 </a>
                 <a class="btn-floating halfway-fab waves-effect waves-light red delete" *ngIf="!showConfirmationDrawer">
                         <i class="material-icons" (click)="deleteGoal();">delete</i>
@@ -14,4 +14,5 @@
 
         </cockpit-delete-confirmation>
 
+        
 </div>

@@ -20,6 +20,7 @@ export class QuickAddComponent implements OnInit {
         ngOnInit() {
         }
         addGoal(title: string) {
+                if (title.length === 0) { return; }
                 this.quickAdd.emit(title);
         }
 

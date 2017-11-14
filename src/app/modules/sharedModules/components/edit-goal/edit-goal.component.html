@@ -1,0 +1,33 @@
+<mz-modal #modal>
+	<mz-modal-header>
+		Edit Goal
+	</mz-modal-header>
+	<mz-modal-content>
+		<form (ngSubmit)="onSubmit(form.value)" #form="ngForm" novalidate>
+			<div class="section">
+				<div class="row">
+					<mz-input-container class="col s12 m12">
+						<input mz-input required mz-validation id="input-title" [ngModel]="goal?.title" #name="ngModel" type="text" [label]="'Title'" name="title" 
+						[ngClass]="{'has-error' : name.errors?.required}"/>
+						<div class="error" *ngIf="name.errors?.required">Title is required!!</div>
+					</mz-input-container>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<mz-select-container class="col s12 m12">
+					<select mz-select required mz-validation id="select-activity-sector" name="status" [(ngModel)]="goal.status" [label]="'Select Status'"
+					 [placeholder]="'Select Status'" [errorMessageResource]="'Title is required'">
+						<option *ngFor="let status of statuses" [ngValue]="status.value">{{ status.label }}</option>
+					</select>
+				</mz-select-container>
+			</div>
+			<div class="row">
+
+				<button mz-button type="button" mz-modal-close style="float:right;margin-left: 10px;">Cancel</button>
+				<button mz-button type="submit" style="float:right;" [disabled]="form.invalid">Save</button>
+			</div>
+		</form>
+	</mz-modal-content>
+</mz-modal>

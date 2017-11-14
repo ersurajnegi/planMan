@@ -1,3 +1,4 @@
+import { EditService } from './../../services/editGoal.service';
 import { QuickAddComponent } from './../quick-add/quick-add.component';
 import { ApiService } from './../../services/apiService.service';
 import { Component, OnInit, ViewEncapsulation, Input, ViewChild } from '@angular/core';
@@ -16,13 +17,15 @@ export class GoalListComponent implements OnInit {
         isLoading: boolean;
         @ViewChild(QuickAddComponent) quickAdd: QuickAddComponent;
         constructor(
-                private _api: ApiService
+                private _api: ApiService,
+                private _editService: EditService
         ) {
                 this.isLoading = false;
                 this.goals = [];
         }
 
         ngOnInit() {
+                this.listenToEditGoalStream();
                 this.isLoading = true;
                 this._api.getData(this.quarterNumber).subscribe((data) => {
                         setTimeout(() => {
@@ -31,6 +34,17 @@ export class GoalListComponent implements OnInit {
                         }, 3000);
                 }, (error) => {
                         this.isLoading = false;
+                });
+        }
+
+        listenToEditGoalStream() {
+                this._editService.editGoalSaveObservable.subscribe((data) => {
+                        console.log('data Updated stream : ', data);
+                        if (data.quarterNumber !== this.quarterNumber) { return; }
+                        const idx = this.goals.findIndex((item) => {
+                                return item.id === data.id;
+                        });
+                        this.goals[idx] = data;
                 });
         }
 

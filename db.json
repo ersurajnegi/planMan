@@ -1,19 +1,108 @@
 {
-  "posts": [
+  "personalGoals1": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 84217,
+      "title": "iki",
+      "status": "InProgress",
+      "quarterNumber": 1
+    },
+    {
+      "id": 44182,
+      "title": "Quarter 1 goal",
+      "status": "Done",
+      "quarterNumber": 1
+    },
+    {
+      "id": 66837,
+      "title": "Quarter 1 goal1",
+      "status": "InProgress"
+    },
+    {
+      "id": 21148,
+      "title": "Quarter 1 goal2",
+      "status": "InProgress"
+    },
+    {
+      "id": 48758,
+      "title": "Quarter 1 goal3",
+      "status": "InProgress"
+    },
+    {
+      "id": 63417,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 65331,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 24643,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 97784,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 11418,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 51529,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
+    },
+    {
+      "id": 57916,
+      "title": "Quarter 1 goal",
+      "status": "InProgress"
     }
   ],
-  "comments": [
+  "personalGoals2": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2000,
+      "title": "Quarter 2 : Want to Go to Ladakh",
+      "status": "Done",
+      "quarterNumber": 2
+    },
+    {
+      "id": 2002,
+      "title": "Quarter 2 : Want to Go to Ladakh",
+      "status": "New",
+      "quarterNumber": 2
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "personalGoals3": [
+    {
+      "id": 3001,
+      "title": "Quarter 3 : Go for World Tour fdfdfdfd",
+      "status": "InProgress",
+      "quarterNumber": 3
+    }
+  ],
+  "personalGoals4": [
+    {
+      "id": 4000,
+      "title": "Quarter 4 : Want to Go to Ladakh",
+      "status": "Done",
+      "quarterNumber": 4
+    },
+    {
+      "id": 4001,
+      "title": "Quarter 4 : Go for World Tour",
+      "status": "InProgress",
+      "quarterNumber": 4
+    },
+    {
+      "id": 4002,
+      "title": "Quarter 4 : Want to Go to Ladakh",
+      "status": "Done",
+      "quarterNumber": 4
+    }
+  ]
 }

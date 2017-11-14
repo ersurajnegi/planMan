@@ -1,3 +1,4 @@
+import { EditService } from './services/editGoal.service';
 import { GoalDetailsComponent } from './components/goal-details/goal-details.component';
 import { GoalListComponent } from './components/goal-list/goal-list.component';
 import { QuickAddComponent } from './components/quick-add/quick-add.component';
@@ -10,6 +11,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { MaterializeModule } from 'ng2-materialize';
 import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
 import { FormsModule } from '@angular/forms';
+import { EditGoalComponent } from './components/edit-goal/edit-goal.component';
+
 
 
 @NgModule({
@@ -36,15 +39,16 @@ import { FormsModule } from '@angular/forms';
                 GoalListComponent,
                 GoalDetailsComponent,
                 LoaderComponent,
-                DeleteConfirmationComponent
-
+                DeleteConfirmationComponent,
+                EditGoalComponent
         ],
+        entryComponents: [EditGoalComponent]
 })
 export class SharedModule {
         static forRoot(): ModuleWithProviders {
                 return {
                         ngModule: SharedModule,
-                        providers: [ApiService]
+                        providers: [ApiService, EditService]
                 }
         }
 }

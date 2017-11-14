@@ -1,0 +1,14 @@
+.error
+{
+        color: #e30613;
+        font-size: .8rem;
+        opacity: 1;
+        overflow-wrap: break-word;
+        margin-top: -19px;
+        min-height: 19px;
+}
+.has-error
+{
+        border-bottom: 1px solid #e30613 !important;
+        box-shadow: 0 1px 0 0 #e30613!important;
+}

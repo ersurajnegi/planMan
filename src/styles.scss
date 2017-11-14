@@ -11,7 +11,6 @@ html, body {
         height: 100%;
         font-size: 1em;
         position: relative;
-        z-index: 0;
         transition: all 0.25s ease;
 }
 .mCSB_container_wrapper
@@ -27,4 +26,14 @@ html, body {
 {
         padding-left: 10px;
             margin-right: 10px;
+}
+
+// .modal-overlay
+// {
+//         display: none!important;
+// }
+
+.modal .modal-footer
+{
+        display: none!important;
 }

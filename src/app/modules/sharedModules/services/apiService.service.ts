@@ -25,4 +25,9 @@ export class ApiService {
                 return this._http.delete(`http://localhost:3000/personalGoals${quarterNo}/${id}`)
                         .map((data: Response) => data);
         }
+
+        updateGoal(goal: any) {
+                return this._http.put(`http://localhost:3000/personalGoals${goal.quarterNumber}/${goal.id}`, goal)
+                        .map((data: Response) => data);
+        }
 }
