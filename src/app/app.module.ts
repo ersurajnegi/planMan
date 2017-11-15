@@ -1,10 +1,6 @@
-import { PersonalGoalModule } from './modules/personalGoalsModule/personalGoal.module';
-import { SharedModule } from './modules/sharedModules/shared.Modules';
+import { AppRoutingModule } from './app.routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-
 import { AppComponent } from './app.component';
 
 
@@ -15,8 +11,7 @@ import { AppComponent } from './app.component';
         ],
         imports: [
                 BrowserModule,
-                SharedModule.forRoot(),
-                PersonalGoalModule
+                AppRoutingModule
         ],
         providers: [],
         bootstrap: [AppComponent]

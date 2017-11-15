@@ -1,11 +1,3 @@
-<cockpit-profile></cockpit-profile>
-<div class="goal-list-container-wrapper" malihuCustomScroller [scrollOptions]=" {
-    theme: 'dark-thick',
-    axis: 'yx'
-  }">
-        <div class="row">
-                <cockpit-goal-list *ngFor="let i of [1,2,3,4]" [quarterNumber]="i">
-
-                </cockpit-goal-list>
-        </div>
-</div>
+<a [routerLink]="'/personal'"> Personal</a>
+<a [routerLink]="'/team'"> Personal</a>
+<router-outlet></router-outlet>
