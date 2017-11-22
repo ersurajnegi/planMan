@@ -10,9 +10,9 @@
                         <i class="material-icons" (click)="deleteGoal();">delete</i>
                 </a>
         </div>
-        <cockpit-delete-confirmation *ngIf="showConfirmationDrawer" (confirm)="deleteGoalConfirmed($event)" (cancel)="deleteGoalCancel($event)">
+        <div #delete>
 
-        </cockpit-delete-confirmation>
-
-        
+        </div>
+        <!-- <cockpit-delete-confirmation *ngIf="showConfirmationDrawer" (confirm)="deleteGoalConfirmed($event)" (cancel)="deleteGoalCancel($event)">
+        </cockpit-delete-confirmation> -->
 </div>

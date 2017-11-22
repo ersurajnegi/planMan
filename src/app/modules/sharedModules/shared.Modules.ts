@@ -42,7 +42,7 @@ import { EditGoalComponent } from './components/edit-goal/edit-goal.component';
                 DeleteConfirmationComponent,
                 EditGoalComponent
         ],
-        entryComponents: [EditGoalComponent]
+        entryComponents: [EditGoalComponent, DeleteConfirmationComponent]
 })
 export class SharedModule {
         static forRoot(): ModuleWithProviders {
