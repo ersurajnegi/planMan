@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "json-server --watch ./db.json"
+    "server": "json-server --watch ./db.json",
+    "compodoc": "compodoc -p src/tsconfig.app.json -n 'Man with Plan' -s --theme 'Postmark'"
   },
   "private": true,
   "dependencies": {

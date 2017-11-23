@@ -12,16 +12,20 @@ export class DeleteConfirmationComponent {
 
         @Output()
         cancel: EventEmitter<any> = new EventEmitter<any>();
-
+        /**
+ * First line
+ *
+ * Second line
+ */
         confirmClick() {
                 this.confirm.emit({
-                        event : 'confirm'
+                        event: 'confirm'
                 });
         }
 
         cancelClick() {
                 this.cancel.emit({
-                        event : 'cancel'
+                        event: 'cancel'
                 });
         }
 
